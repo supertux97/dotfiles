@@ -1,0 +1,15 @@
+BASHRC="~/.profile"
+EDITOR="vim"
+export PS1="\[\e[32m\]\w$ \[\e[m\]"
+
+alias ls="ls -G"
+alias grep="egrep --color"
+alias ..="cd .."
+alias last="ls -ltr"
+alias gdw="cd ~/Downloads"
+alias gdo="cd ~/Documents"
+alias gde="cd ~/Desktop"
+alias gdp="cd ~/Pictures"
+
+alias vimrc="vim ~/.vimrc"
+alias bashrc="vim $BASHRC && source $BASHRC"
