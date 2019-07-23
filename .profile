@@ -1,4 +1,9 @@
-BASHRC="~/.profile"
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    BASHRC="~/.bashrc"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    BASHRC="~/.profile"
+fi
+
 EDITOR="vim"
 export PS1="\[\e[32m\]\w$ \[\e[m\]"
 
@@ -13,3 +18,4 @@ alias gdp="cd ~/Pictures"
 
 alias vimrc="vim ~/.vimrc"
 alias bashrc="vim $BASHRC && source $BASHRC"
+alias screenrc="vim ~/.screenrc"
