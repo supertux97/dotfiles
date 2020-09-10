@@ -5,7 +5,11 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 EDITOR="vim"
-export PS1="\[\e[32m\]\w$ \[\e[m\]"
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+export PS1="\[\e[32m\]\w$\[\e[m\]\[\e[91m\]\$(parse_git_branch)\[\e[00m\] "
 
 alias ls="ls -G"
 alias grep="egrep --color"
