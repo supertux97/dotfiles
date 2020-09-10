@@ -19,3 +19,7 @@ alias gdp="cd ~/Pictures"
 alias vimrc="vim ~/.vimrc"
 alias bashrc="vim $BASHRC && source $BASHRC"
 alias screenrc="vim ~/.screenrc"
+
+
+bind "set completion-ignore-case on"
+bind "set show-all-if-ambiguous on"
